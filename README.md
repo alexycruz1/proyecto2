@@ -2,7 +2,7 @@
 Clase Dinosaurio: (Nombre,Peso,altura,Fecha de nacimiento,esperanza de vida,era*,territorio*)       *Opcional
 
 *Herbivoros
-1.- Apatosaurio(Edad, Comida, Nombre, Fecha de nacimiento, peso)
+1.- Apatosaurio()
 2.- Triceratops
 3.- Iguanodonte
 4.- Pentaceratops
