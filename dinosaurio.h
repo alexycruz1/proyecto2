@@ -5,6 +5,7 @@ using std::string;
 
 class dinosaurio{
 	string nombre;
+	char genero;
 	int peso;
 	int altura;
 	int esperanza_vida;
@@ -12,7 +13,8 @@ class dinosaurio{
 	string territorio;
 	int edad;
 public:
-	dinosaurio(string nombre, int peso, int altura, int esperanza_vida, string era, string territorio, int edad = 0);
-	virtual ~dinosaurio();
+	dinosaurio();
+	dinosaurio(string nombre,char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int edad = 0);
+	~dinosaurio();
 	virtual string toString()const;	
 };
