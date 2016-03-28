@@ -9,13 +9,9 @@ Clase Dinosaurio: (Nombre,Peso,altura,Fecha de nacimiento,esperanza de vida,era*
 5.- Ankylosaurus//
 
 *Carnivoros
-1.-Tyrannosaurus
-2.-Spinosaurus
-3.-Albertosaurus
+1.-Tyrannosaurus//esta listo
+2.-Spinosaurus//esta listo
+3.-Albertosaurus//esta listo
 4.-Velociraptor
-5.-Torvosaurus
-6.-Baryonyx
-7.-Carnotaurus
-8.-Deinonychus
-9.-Graciliraptor
-10.-Utahraptor
+5.-Carnotaurus
+
