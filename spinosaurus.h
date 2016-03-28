@@ -10,4 +10,5 @@ class spinosaurus :public dinosaurio{
 	string toString()const;
 	void addEdad(double, int);
 	spinosaurus procrear(const spinosaurus&);
+	void comer(int&);
 };

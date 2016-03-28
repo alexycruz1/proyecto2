@@ -10,4 +10,5 @@ class velociraptor :public dinosaurio{
 	string toString()const;
 	void addEdad(double, int);
 	velociraptor procrear(const velociraptor&);
+	void comer(int&);
 };

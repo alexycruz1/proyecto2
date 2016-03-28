@@ -12,3 +12,7 @@ string iguanodonte::toString()const{
 	ss << dinosaurio::toString() << " Iguanodonte:" ;
 	return ss.str();
 }
+
+void iguanodonte::comer(int&){
+	
+}

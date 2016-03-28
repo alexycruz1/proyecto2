@@ -12,3 +12,7 @@ string albertosaurus::toString()const{
 	ss << dinosaurio::toString() << " Albertosaurus:" ;
 	return ss.str();
 }
+
+void albertosaurus::comer(int&){
+	
+}

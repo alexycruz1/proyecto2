@@ -10,4 +10,5 @@ class albertosaurus :public dinosaurio{
 	string toString()const;
 	void addEdad(double, int);
 	albertosaurus procrear(const albertosaurus&);
+	void comer(int&);
 };

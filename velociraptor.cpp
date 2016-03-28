@@ -12,3 +12,7 @@ string velociraptor::toString()const{
 	ss << dinosaurio::toString() << " Velociraptor:" ;
 	return ss.str();
 }
+
+void velociraptor::comer(int&){
+	
+}

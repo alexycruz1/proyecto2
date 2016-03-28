@@ -12,3 +12,7 @@ string carnotaurus::toString()const{
 	ss << dinosaurio::toString() << " Carnotaurus:" ;
 	return ss.str();
 }
+
+void carnotaurus::comer(int&){
+	
+}

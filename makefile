@@ -1,8 +1,8 @@
 proyecto2:	main.o dinosaurio.o t_rex.o spinosaurus.o albertosaurus.o velociraptor.o carnotaurus.o apatosaurio.o triceratops.o iguanodonte.o pentaceratops.o ankylosaurus.o
-	g++ dinosaurio.o  t_rex.o spinosaurus.o albertosaurus.o velociraptor.o carnotaurus.o apatosaurio.o triceratops.o iguanodonte.o pentaceratops.o ankylosaurus.o main.o -o proyecto2
+	g++ dinosaurio.o  t_rex.o spinosaurus.o albertosaurus.o velociraptor.o carnotaurus.o apatosaurio.o triceratops.o iguanodonte.o pentaceratops.o ankylosaurus.o main.o -lncurses -o proyecto2
 
 main.o:	main.cpp dinosaurio.h t_rex.h spinosaurus.h albertosaurus.h velociraptor.h carnotaurus.h  apatosaurio.h triceratops.h iguanodonte.h pentaceratops.h ankylosaurus.h
-	g++ -c main.cpp
+	g++ -c main.cpp -lncurses
 
 dinosaurio.o:	dinosaurio.cpp dinosaurio.h
 	g++ -c dinosaurio.cpp

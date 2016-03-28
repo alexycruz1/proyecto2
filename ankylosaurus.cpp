@@ -12,3 +12,7 @@ string ankylosaurus::toString()const{
 	ss << dinosaurio::toString() << " Ankylosaurus:" ;
 	return ss.str();
 }
+
+void ankylosaurus::comer(int&){
+	
+}

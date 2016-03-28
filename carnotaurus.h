@@ -10,4 +10,5 @@ class carnotaurus :public dinosaurio{
 	string toString()const;
 	void addEdad(double, int);
 	carnotaurus procrear(const carnotaurus&);
+	void comer(int&);
 };

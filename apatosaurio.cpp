@@ -12,3 +12,7 @@ string apatosaurio::toString()const{
 	ss << dinosaurio::toString() << " Apatosaurio:" ;
 	return ss.str();
 }
+
+void apatosaurio::comer(int&){
+	
+}

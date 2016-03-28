@@ -10,4 +10,5 @@ class t_rex :public dinosaurio{
 	string toString()const;
 	void addEdad(double, int);
 	t_rex procrear(const t_rex&);
+	void comer(int&);
 };

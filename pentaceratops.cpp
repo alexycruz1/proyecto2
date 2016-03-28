@@ -12,3 +12,7 @@ string pentaceratops::toString()const{
 	ss << dinosaurio::toString() << " Pentaceratops:" ;
 	return ss.str();
 }
+
+void pentaceratops::comer(int&){
+	
+}

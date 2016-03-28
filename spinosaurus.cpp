@@ -12,3 +12,7 @@ string spinosaurus::toString()const{
 	ss << dinosaurio::toString() << " spinosaurus:" ;
 	return ss.str();
 }
+
+void spinosaurus::comer(int&){
+	
+}

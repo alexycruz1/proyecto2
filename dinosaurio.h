@@ -18,4 +18,5 @@ public:
 	dinosaurio(string nombre,char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int hambre, int edad = 0);
 	~dinosaurio();
 	virtual string toString()const;	
+	virtual void comer(int&) = 0;
 };

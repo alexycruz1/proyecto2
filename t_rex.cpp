@@ -12,3 +12,7 @@ string t_rex::toString()const{
 	ss << dinosaurio::toString() << " tyrannosaurus:" ;
 	return ss.str();
 }
+
+void t_rex::comer(int&){
+	
+}
