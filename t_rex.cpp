@@ -5,7 +5,8 @@
 using std::string;
 using std::stringstream;
 
-t_rex::t_rex(string nombre, char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int edad):dinosaurio(nombre,genero,peso,altura,esperanza_vida,era,territorio,edad){}
+t_rex::t_rex(string nombre, char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int hambre, int edad):dinosaurio(nombre,genero,peso,altura,esperanza_vida,era,territorio, hambre, edad){}
+
 string t_rex::toString()const{
 	stringstream ss;
 	ss << dinosaurio::toString() << " tyrannosaurus:" ;

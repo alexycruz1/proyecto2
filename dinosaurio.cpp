@@ -8,7 +8,7 @@ using std::stringstream;
 dinosaurio::dinosaurio(){
 }
 
-dinosaurio::dinosaurio(string nombre, char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int edad){
+dinosaurio::dinosaurio(string nombre, char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int hambre, int edad){
 	this -> nombre = nombre;
 	this -> genero = genero;
 	this -> peso = peso;
@@ -17,6 +17,7 @@ dinosaurio::dinosaurio(string nombre, char genero, int peso, int altura, int esp
 	this -> era = era;
 	this -> territorio = territorio;
 	this -> edad = edad;
+	this -> hambre = hambre;
 }
 
 dinosaurio::~dinosaurio(){}

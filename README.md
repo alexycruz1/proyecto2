@@ -2,16 +2,11 @@
 Clase Dinosaurio: (Nombre,Peso,altura,Fecha de nacimiento,esperanza de vida,era*,territorio*)       *Opcional
 
 *Herbivoros
-1.- Apatosaurio()
-2.- Triceratops
-3.- Iguanodonte
-4.- Pentaceratops
-5.- Pachycephalosaurus
-6.- Ankylosaurus
-7.- Styracosaurus
-8.- Shantungosaurus
-9.- Euoplocephalus
-10.- Parasaurolophus
+1.- Apatosaurio()//esta listo
+2.- Triceratops//esta listo
+3.- Iguanodonte//esta listo
+4.- Pentaceratops//esta listo
+5.- Ankylosaurus//
 
 *Carnivoros
 1.-Tyrannosaurus
