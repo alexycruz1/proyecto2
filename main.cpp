@@ -26,9 +26,12 @@ int main(int argc, char* argv[]){
 
   	move(0, 10);
   	start_color();
-    init_pair(1, COLOR_BLUE, COLOR_BLACK);
-    attron(COLOR_PAIR(1));
-  	printw("Dinero: ", "%i", dinero);
+    	init_pair(1, COLOR_BLUE, COLOR_BLACK);
+    	attron(COLOR_PAIR(1));
+  	mvprintw(1,width-20,"Dinero: ", "%i", dinero);
+	mvprintw(1,width-12,"%i", dinero);
+	mvprintw(1,width-40,"Semana: ", "%i", semana);
+	mvprintw(1,width-32,"%i", semana);
   	refresh();
   	char var = getch();
 
@@ -39,3 +42,8 @@ int main(int argc, char* argv[]){
   	endwin();
 	return 0;
 }
+
+
+
+
+
