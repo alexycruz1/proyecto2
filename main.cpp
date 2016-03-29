@@ -352,28 +352,33 @@ int main(int argc, char* argv[]){
   			}//fin de compras
 
   		}else if (opcion == '2'){//dar de comida
-  			
-  			mvprintw(11,width-130,"Ingrese el dinosaurio a alimentar: ");
-        	refresh();
-        	string elegir_dino = " ";
-        	char elegir_dino_temp[100];
-        	int dino;
+  			if (comida > 0){
+         mvprintw(11,width-130,"Ingrese el dinosaurio a alimentar: ");
+          refresh();
+          string elegir_dino = " ";
+          char elegir_dino_temp[100];
+          int dino;
 
-        	move(11, width-130);
-        	addstr("Ingrese el dinosaurio a alimentar: ");
-        	getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
+          move(11, width-130);
+          addstr("Ingrese el dinosaurio a alimentar: ");
+          getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
 
-        	for (int i = 0; i < 101; ++i){
-          		elegir_dino += elegir_dino_temp[i];
-        	}
-        	dino = atoi(elegir_dino.c_str()); 
+          for (int i = 0; i < 101; ++i){
+            elegir_dino += elegir_dino_temp[i];
+          }
+          dino = atoi(elegir_dino.c_str()); 
 
-        	for (int i = 0; i < dinosaurios.size(); i++){
-          		if (i == dino-1){
-            		dinosaurios[i]->comer(comida);
-          	}
+          for (int i = 0; i < dinosaurios.size(); i++){
+            if (i == dino-1){
+              dinosaurios[i]->comer(comida);
+            }
+          }
+          clear();
+        }else{
+          mvprintw(11,width-130,"NO TIENES MAS COMIDA");
+          clear();
         }
-        clear();
+  			
   		}else if (opcion == '3'){
   		
   		}else if (opcion == '4'){//comprar comida
