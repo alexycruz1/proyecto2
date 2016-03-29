@@ -42,7 +42,7 @@ void t_rex::hambrita(){
 }
 
 bool t_rex::morir(){
-	if(esperanza_vida==edad){
+	if(esperanza_vida==edad || hambre<=0){
 		return true;
 	}else{
 		return false;

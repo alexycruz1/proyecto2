@@ -42,7 +42,7 @@ void albertosaurus::hambrita(){
 }
 
 bool albertosaurus::morir(){
-        if(esperanza_vida==edad){
+        if(esperanza_vida==edad || hambre==0){
                 return true;
         }else{
                 return false;
@@ -52,7 +52,7 @@ bool albertosaurus::morir(){
 void albertosaurus::cumple(){
         edad+=1;
 }
-void albertosaurus::paga(int& dinero int& semana){
+void albertosaurus::paga(int& dinero ,int& semana){
         if(semana%4==0){
                 dinero+= 1000;
         }

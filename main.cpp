@@ -20,8 +20,8 @@ using std::vector;
 int main(int argc, char* argv[]){
 	vector <dinosaurio*> dinosaurios;
 	int semana;
-  semana = 0;
-	long long int dinero;
+ 	semana = 0;
+	int dinero;
   dinero = 100000;
 	int comida = 50;
 	int width, height;
@@ -426,7 +426,7 @@ int main(int argc, char* argv[]){
           }
 
           for (int i = 0; i < dinosaurios.size(); i++){//pagar
-            //dinosaurios[i] -> paga(dinero, semana);
+            dinosaurios[i] -> paga(dinero, semana);
           }
         }//fin de cambio de semana
   		}

@@ -11,8 +11,8 @@ class ankylosaurus :public dinosaurio{
 	void addEdad(double, int);
 	ankylosaurus procrear(const ankylosaurus&);
 	void comer(int&);
-        void hambre();
-        bool morir();
+        void hambrita();
+        bool morir(int);
         void cumple();
         void paga(int&,int&);
 

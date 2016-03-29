@@ -15,5 +15,4 @@ class apatosaurio :public dinosaurio{
         bool morir();
         void cumple();
         void paga(int&,int&);
-
 };

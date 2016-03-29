@@ -11,8 +11,8 @@ class albertosaurus :public dinosaurio{
 	void addEdad(double, int);
 	albertosaurus procrear(const albertosaurus&);
 	void comer(int&);
-        void hambre();
-        bool morir();
+        void hambrita();
+        bool morir(int);
         void cumple();
         void paga(int&,int&);
 

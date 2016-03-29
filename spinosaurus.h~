@@ -11,8 +11,8 @@ class spinosaurus :public dinosaurio{
 	void addEdad(double, int);
 	spinosaurus procrear(const spinosaurus&);
 	void comer(int&);
-        void hambre();
-        bool morir();
+        void hambrita();
+        bool morir(int);
         void cumple();
         void paga(int&,int&);
 

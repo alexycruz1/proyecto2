@@ -42,7 +42,7 @@ void carnotaurus::hambrita(){
 }
 
 bool carnotaurus::morir(){
-        if(esperanza_vida==edad){
+        if(esperanza_vida==edad || hambre<=0){
                 return true;
         }else{
                 return false;
