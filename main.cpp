@@ -19,13 +19,15 @@ using std::vector;
 
 int main(int argc, char* argv[]){
 	vector <dinosaurio*> dinosaurios;
-	int semana = 0;
-	long long int dinero = 100000;
+	int semana;
+  semana = 0;
+	long long int dinero;
+  dinero = 100000;
 	int comida = 50;
 	int width, height;
 	bool acabar = false;
 
-	initscr();
+	   initscr();
   	(void)echo();
   	getmaxyx(curscr, height, width);
 
@@ -408,7 +410,25 @@ int main(int argc, char* argv[]){
           semana++;
           clear();
           mvprintw(10,width-130,"Haz avanzado de semana");
-        }
+
+          for (int i = 0; i < dinosaurios.size(); i++){//hambriento
+            dinosaurios[i]->hambrita();
+          }
+
+          for (int i = 0; i < dinosaurios.size(); i++){//ver si muere
+            if((dinosaurios[i] -> morir()) == true){
+              dinosaurios.erase(dinosaurios.begin() + i);
+            }
+          }
+
+          for (int i = 0; i < dinosaurios.size(); i++){//cumple anos
+            dinosaurios[i] -> cumple();
+          }
+
+          for (int i = 0; i < dinosaurios.size(); i++){//pagar
+            //dinosaurios[i] -> paga(dinero, semana);
+          }
+        }//fin de cambio de semana
   		}
   		clear();
   	}

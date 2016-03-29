@@ -52,9 +52,10 @@ bool t_rex::morir(){
 void t_rex::cumple(){
 	edad+=1;
 }
+
 void t_rex::paga(int& dinero,int& semana){
-	if(semana%4==0){
-		dinero+= 3000;
+	if(semana % 4 == 0){
+		dinero += 3000;
 	}
 }
 

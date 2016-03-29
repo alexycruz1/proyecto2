@@ -14,6 +14,6 @@ class t_rex :public dinosaurio{
 	void hambrita();
 	bool morir();
 	void cumple();
-	void paga(int&,int&);
+	void paga(int&, int&);
 	
 };

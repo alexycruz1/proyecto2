@@ -3,7 +3,7 @@ Clase Dinosaurio: (Nombre,Peso,altura,Fecha de nacimiento,esperanza de vida,era*
 
 *Herbivoros
 1.- Apatosaurio -> 75mil, 20 hambre, 4mil ganancia 
-2.- Triceratops -> 50mil, 15 hambre, mil ganancia 
+2.- Triceratops -> 50mil, 15 hambre, 2mil ganancia 
 3.- Iguanodonte -> 20mil, 10 hambre, mil ganancia 
 4.- Pentaceratops -> 70mil, 20 hambre, 3mil ganancia
 5.- Ankylosaurus -> 35mil, 20 hambre, 2mil ganancia
