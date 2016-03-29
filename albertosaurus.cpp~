@@ -9,7 +9,7 @@ albertosaurus::albertosaurus(string nombre, char genero, int peso, int altura, i
 
 string albertosaurus::toString()const{
 	stringstream ss;
-	ss << " Albertosaurus:" ;
+	ss << dinosaurio::toString() << " Albertosaurus:" ;
 	return ss.str();
 }
 

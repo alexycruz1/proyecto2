@@ -9,7 +9,7 @@ apatosaurio::apatosaurio(string nombre, char genero, int peso, int altura, int e
 
 string apatosaurio::toString()const{
 	stringstream ss;
-	ss  << " Apatosaurio:" ;
+	ss << dinosaurio::toString() << " Apatosaurio:" ;
 	return ss.str();
 }
 

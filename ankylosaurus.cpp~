@@ -9,7 +9,7 @@ ankylosaurus::ankylosaurus(string nombre, char genero, int peso, int altura, int
 
 string ankylosaurus::toString()const{
 	stringstream ss;
-	ss << " Ankylosaurus:" ;
+	ss << dinosaurio::toString() << " Ankylosaurus:" ;
 	return ss.str();
 }
 

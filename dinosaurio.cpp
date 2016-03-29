@@ -22,8 +22,8 @@ dinosaurio::dinosaurio(string nombre, char genero, int peso, int altura, int esp
 
 dinosaurio::~dinosaurio(){}
 
-string dinosaurio::toString()const{
+/*string dinosaurio::toString()const{
 	stringstream ss;
-	ss << "Dinosaurio ";
+	ss << nombre<<"    "<<genero;
 	return ss.str();
-}
+}*/

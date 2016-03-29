@@ -9,7 +9,7 @@ triceratops::triceratops(string nombre, char genero, int peso, int altura, int e
 
 string triceratops::toString()const{
 	stringstream ss;
-	ss  << " Triceratops:" ;
+	ss << dinosaurio::toString() << " Triceratops:" ;
 	return ss.str();
 }
 

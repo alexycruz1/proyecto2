@@ -41,7 +41,7 @@ int main(int argc, char* argv[]){
 		mvprintw(1,width-32,"%i", semana);
 		mvprintw(1,width-60,"Comida: ", "%i", comida);
 		mvprintw(1,width-52,"%i", comida);
-		mvprintw(14,width-130,"Nombre	Genero    Peso    Altura    Esperanza de vida    Era    Territorio    Hambre    Edad");
+		mvprintw(14,width-130,"Genero    Peso    Altura    Esperanza de vida       Era         Territorio    Hambre    Edad    Nombre");
 		for(int i=0; i<dinosaurios.size();i++){
 			const char* impresion = (dinosaurios[i]->toString()).c_str();
 			mvprintw(15+i,width-132, "%i", i+1);

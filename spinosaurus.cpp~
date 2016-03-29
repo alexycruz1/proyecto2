@@ -9,7 +9,7 @@ spinosaurus::spinosaurus(string nombre, char genero, int peso, int altura, int e
 
 string spinosaurus::toString()const{
 	stringstream ss;
-	ss  << " spinosaurus:" ;
+	ss << dinosaurio::toString() << " spinosaurus:" ;
 	return ss.str();
 }
 

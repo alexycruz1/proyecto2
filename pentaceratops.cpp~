@@ -9,7 +9,7 @@ pentaceratops::pentaceratops(string nombre, char genero, int peso, int altura, i
 
 string pentaceratops::toString()const{
 	stringstream ss;
-	ss  << " Pentaceratops:" ;
+	ss << dinosaurio::toString() << " Pentaceratops:" ;
 	return ss.str();
 }
 

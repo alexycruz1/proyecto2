@@ -9,7 +9,7 @@ velociraptor::velociraptor(string nombre, char genero, int peso, int altura, int
 
 string velociraptor::toString()const{
 	stringstream ss;
-	ss  << " Velociraptor:" ;
+	ss << dinosaurio::toString() << " Velociraptor:" ;
 	return ss.str();
 }
 

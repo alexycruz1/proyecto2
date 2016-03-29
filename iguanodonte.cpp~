@@ -9,7 +9,7 @@ iguanodonte::iguanodonte(string nombre, char genero, int peso, int altura, int e
 
 string iguanodonte::toString()const{
 	stringstream ss;
-	ss  << " Iguanodonte:" ;
+	ss << dinosaurio::toString() << " Iguanodonte:" ;
 	return ss.str();
 }
 

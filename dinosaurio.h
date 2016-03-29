@@ -4,6 +4,7 @@
 using std::string;
 
 class dinosaurio{
+protected:
 	string nombre;
 	char genero;
 	int peso;
@@ -17,6 +18,6 @@ public:
 	dinosaurio();
 	dinosaurio(string nombre,char genero, int peso, int altura, int esperanza_vida, string era, string territorio, int hambre, int edad = 0);
 	~dinosaurio();
-	virtual string toString()const;	
+	virtual string toString()const=0;	
 	virtual void comer(int&) = 0;
 };

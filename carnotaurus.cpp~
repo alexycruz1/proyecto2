@@ -9,7 +9,7 @@ carnotaurus::carnotaurus(string nombre, char genero, int peso, int altura, int e
 
 string carnotaurus::toString()const{
 	stringstream ss;
-	ss  << " Carnotaurus:" ;
+	ss << dinosaurio::toString() << " Carnotaurus:" ;
 	return ss.str();
 }
 
