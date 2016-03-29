@@ -18,3 +18,4 @@ Clase Dinosaurio: (Nombre,Peso,altura,Fecha de nacimiento,esperanza de vida,era*
 dinero inicial -> 100mil
 unidad de comida -> 100
 disminucion de hambre -> 4/semana
+comida inicial -> 50
