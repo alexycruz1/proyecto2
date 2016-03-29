@@ -31,9 +31,9 @@ string albertosaurus::toString()const{
 }
 
 void albertosaurus::comer(int& comidon){
-	if(hambre<15){
-                comidon-=3;
-                hambre+=3;
-        }
+	if(hambre < 15){
+    	comidon -= 3;
+        hambre += 3;
+    }
 
 }

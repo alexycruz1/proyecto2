@@ -36,17 +36,17 @@ int main(int argc, char* argv[]){
     	init_pair(1, COLOR_BLUE, COLOR_BLACK);
     	attron(COLOR_PAIR(1));
   		mvprintw(1,width-20,"Dinero: ", "%i", dinero);
-		mvprintw(1,width-12,"%i", dinero);
-		mvprintw(1,width-40,"Semana: ", "%i", semana);
-		mvprintw(1,width-32,"%i", semana);
-		mvprintw(1,width-60,"Comida: ", "%i", comida);
-		mvprintw(1,width-52,"%i", comida);
-		mvprintw(14,width-130,"Genero    Peso    Altura    Esperanza de vida       Era         Territorio    Hambre    Edad    Nombre");
-		for(int i=0; i<dinosaurios.size();i++){
-			const char* impresion = (dinosaurios[i]->toString()).c_str();
-			mvprintw(15+i,width-132, "%i", i+1);
-			mvprintw(15+i,width-130, impresion);
-		}
+		  mvprintw(1,width-12,"%i", dinero);
+		  mvprintw(1,width-40,"Semana: ", "%i", semana);
+		  mvprintw(1,width-32,"%i", semana);
+		  mvprintw(1,width-60,"Comida: ", "%i", comida);
+		  mvprintw(1,width-52,"%i", comida);
+		  mvprintw(14,width-130,"Genero    Peso    Altura    Esperanza de vida       Era         Territorio    Hambre    Edad    Nombre");
+		  for(int i=0; i<dinosaurios.size();i++){
+			 const char* impresion = (dinosaurios[i]->toString()).c_str();
+			 mvprintw(15+i,width-132, "%i", i+1);
+			 mvprintw(15+i,width-130, impresion);
+		  }
   		refresh();
 		
 
@@ -352,7 +352,28 @@ int main(int argc, char* argv[]){
   			}//fin de compras
 
   		}else if (opcion == '2'){//dar de comida
-  			
+  			mvprintw(11,width-130,"Ingrese el dinosaurio a alimentar: ");
+        refresh();
+        string elegir_dino = " ";
+        char elegir_dino_temp[100];
+        int dino;
+
+        move(11, width-130);
+        addstr("Ingrese el dinosaurio a alimentar: ");
+        getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
+
+        for (int i = 0; i < 101; ++i){
+          elegir_dino += elegir_dino_temp[i];
+        }
+        dino = atoi(elegir_dino.c_str()); 
+
+        for (int i = 0; i < dinosaurios.size(); i++){
+          if (i == dino){
+            dinosaurios[i]->comer(comida);
+          }
+        }
+        clear();
+
   		}else if (opcion == '3'){
   		
   		}else if (opcion == '4'){//comprar comida
