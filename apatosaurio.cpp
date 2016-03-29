@@ -32,8 +32,28 @@ string apatosaurio::toString()const{
 
 void apatosaurio::comer(int& comidon){
 	if(hambre<20){
-                comidon-=3;
-                hambre+=3;
+                comidon-=4;
+                hambre+=4;
         }
 
+}
+void apatosaurio::hambrita(){
+        hambre-=10;
+}
+
+bool apatosaurio::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void apatosaurio::cumple(){
+        edad+=1;
+}
+void apatosaurio::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 4000;
+        }
 }

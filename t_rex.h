@@ -11,4 +11,9 @@ class t_rex :public dinosaurio{
 	void addEdad(double, int);
 	t_rex procrear(const t_rex&);
 	void comer(int&);
+	void hambrita();
+	bool morir();
+	void cumple();
+	void paga(int&,int&);
+	
 };

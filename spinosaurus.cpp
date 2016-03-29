@@ -32,8 +32,28 @@ string spinosaurus::toString()const{
 
 void spinosaurus::comer(int& comidon){
 	if(hambre<25){
-                comidon-=3;
-                hambre+=3;
+                comidon-=6;
+                hambre+=6;
         }
 
+}
+void spinosaurus::hambrita(){
+        hambre-=9;
+}
+
+bool spinosaurus::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void spinosaurus::cumple(){
+        edad+=1;
+}
+void spinosaurus::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 4000;
+        }
 }

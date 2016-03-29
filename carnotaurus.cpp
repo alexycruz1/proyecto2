@@ -32,8 +32,28 @@ string carnotaurus::toString()const{
 
 void carnotaurus::comer(int& comidon){
 	if(hambre<20){
-                comidon-=3;
-                hambre+=3;
+                comidon-=4;
+                hambre+=4;
         }
 
+}
+void carnotaurus::hambrita(){
+        hambre-=7;
+}
+
+bool carnotaurus::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void carnotaurus::cumple(){
+        edad+=1;
+}
+void carnotaurus::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 2000;
+        }
 }

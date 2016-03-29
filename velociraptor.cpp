@@ -32,8 +32,28 @@ string velociraptor::toString()const{
 
 void velociraptor::comer(int& comidon){
 	if(hambre<10){
-                comidon-=3;
-                hambre+=3;
+                comidon-=2;
+                hambre+=2;
         }
 
+}
+void velociraptor::hambrita(){
+        hambre-=5;
+}
+
+bool velociraptor::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void velociraptor::cumple(){
+        edad+=1;
+}
+void velociraptor::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 1000;
+        }
 }

@@ -37,3 +37,23 @@ void triceratops::comer(int& comidon){
         }
 
 }
+void triceratops::hambrita(){
+        hambre-=7;
+}
+
+bool triceratops::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void triceratops::cumple(){
+        edad+=1;
+}
+void triceratops::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 2000;
+        }
+}

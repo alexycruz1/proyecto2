@@ -323,34 +323,37 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new pentaceratops(nombre, genero));
           }
   				
-  			}else if (opcion2 == '9' && dinero >= 35000){
-  				clear();
+  		}else if (opcion2 == '9' && dinero >= 35000){
+  			clear();
 
-  				string nombre = "";
-  				char nombre_temp[15];
-  				char genero;
+  			string nombre = "";
+  			char nombre_temp[15];
+  			char genero;
 
-  				move(4, width-100);
-  				addstr("Ingrese el nombre del Ankylosaurus: ");
-  				getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-  				clear();
+  			move(4, width-100);
+  			addstr("Ingrese el nombre del Ankylosaurus: ");
+  			getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+  			clear();
 
-  				move(4, width-100);
-  				printw("Ingrese el genero del Ankylosaurus(M/F): ");
-  				genero = getch();
-  				clear();
+  			move(4, width-100);
+  			printw("Ingrese el genero del Ankylosaurus(M/F): ");
+  			genero = getch();
+  			clear();
 
-  				for (int i = 0; i < 16; ++i){
-  					nombre += nombre_temp[i];
-  				}
+  			for (int i = 0; i < 16; ++i){
+  				nombre += nombre_temp[i];
+  			}
 
           if (dinero >= 35000){
             dinero = dinero - 35000;
             dinosaurios.push_back(new ankylosaurus(nombre, genero));
           }
   				
-  			}else{
-          mvprintw(10,width-130,"NO TIENES SUFICIENTE DINERO!");
+  	}else{
+		clear();
+         	mvprintw(10,width-130,"NO TIENES SUFICIENTE DINERO!");
+	 	getch();
+	 	clear();
         }//fin de compras
 
   		}else if (opcion == '2'){//dar de comida

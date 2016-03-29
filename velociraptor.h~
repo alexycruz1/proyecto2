@@ -11,7 +11,7 @@ class velociraptor :public dinosaurio{
 	void addEdad(double, int);
 	velociraptor procrear(const velociraptor&);
 	void comer(int&);
-        void hambrita();
+        void hambre();
         bool morir();
         void cumple();
         void paga(int&,int&);

@@ -30,10 +30,31 @@ string albertosaurus::toString()const{
 	return temp.str();
 }
 
-void albertosaurus::comer(int&){
-	if(hambre<15){
-                comidon-=3;
-                hambre+=3;
+void albertosaurus::comer(int& comidon){
+	if(hambre < 15){
+    		comidon -= 2;
+        	hambre += 2;
+    	}
+
+}
+void albertosaurus::hambrita(){
+        hambre-=5;
+}
+
+bool albertosaurus::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
         }
 
 }
+void albertosaurus::cumple(){
+        edad+=1;
+}
+void albertosaurus::paga(int& dinero int& semana){
+        if(semana%4==0){
+                dinero+= 1000;
+        }
+}
+

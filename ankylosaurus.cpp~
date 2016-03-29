@@ -30,10 +30,31 @@ string ankylosaurus::toString()const{
 	return temp.str();
 }
 
-void ankylosaurus::comer(int&){
+void ankylosaurus::comer(int& comidon){
 	if(hambre<20){
-                comidon-=3;
-                hambre+=3;
+                comidon-=4;
+                hambre+=4;
         }
 	
 }
+void ankylosaurus::hambrita(){
+        hambre-=6;
+}
+
+bool ankylosaurus::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void ankylosaurus::cumple(){
+        edad+=1;
+}
+void ankylosaurus::paga(int& dinero int& semana){
+        if(semana%4==0){
+                dinero+= 2000;
+        }
+}
+

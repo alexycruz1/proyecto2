@@ -32,8 +32,28 @@ string pentaceratops::toString()const{
 
 void pentaceratops::comer(int& comidon){
 	if(hambre<20){
-                comidon-=3;
-                hambre+=3;
+                comidon-=4;
+                hambre+=4;
         }
 
+}
+void pentaceratops::hambrita(){
+        hambre-=7;
+}
+
+bool pentaceratops::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void pentaceratops::cumple(){
+        edad+=1;
+}
+void pentaceratops::paga(int& dinero ,int& semana){
+        if(semana%4==0){
+                dinero+= 3000;
+        }
 }

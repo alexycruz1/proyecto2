@@ -37,7 +37,25 @@ void t_rex::comer(int& comidon){
 	}		
 }
 
+void t_rex::hambrita(){
+	hambre-=7;
+}
 
-
+bool t_rex::morir(){
+	if(esperanza_vida==edad){
+		return true;
+	}else{
+		return false;
+	}
+	
+}
+void t_rex::cumple(){
+	edad+=1;
+}
+void t_rex::paga(int& dinero,int& semana){
+	if(semana%4==0){
+		dinero+= 3000;
+	}
+}
 
 

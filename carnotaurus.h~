@@ -11,7 +11,7 @@ class carnotaurus :public dinosaurio{
 	void addEdad(double, int);
 	carnotaurus procrear(const carnotaurus&);
 	void comer(int&);
-        void hambrita();
+        void hambre();
         bool morir();
         void cumple();
         void paga(int&,int&);

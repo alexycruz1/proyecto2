@@ -30,10 +30,30 @@ string iguanodonte::toString()const{
 	return temp.str();
 }
 
-void iguanodonte::comer(int&){
+void iguanodonte::comer(int& comidon){
 	if(hambre<10){
-                comidon-=3;
-                hambre+=3;
+                comidon-=2;
+                hambre+=2;
         }
 
+}
+void iguanodonte::hambrita(){
+        hambre-=4;
+}
+
+bool iguanodonte::morir(){
+        if(esperanza_vida==edad){
+                return true;
+        }else{
+                return false;
+        }
+
+}
+void iguanodonte::cumple(){
+        edad+=1;
+}
+void iguanodonte::paga(int& dinero int& semana){
+        if(semana%4==0){
+                dinero+= 1000;
+        }
 }

@@ -11,7 +11,7 @@ class pentaceratops :public dinosaurio{
 	void addEdad(double, int);
 	pentaceratops procrear(const pentaceratops&);
 	void comer(int&);
-        void hambrita();
+        void hambre();
         bool morir();
         void cumple();
         void paga(int&,int&);
