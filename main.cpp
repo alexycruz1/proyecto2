@@ -65,25 +65,25 @@ int main(int argc, char* argv[]){
   			clear();
   			char opcion2;
 
-  			mvprintw(4,width-100,"Carnivoros");
-  			mvprintw(5,width-100,"0.- Tyrannosaurus");
-  			mvprintw(6,width-100,"1.- Spinosaurus");
-  			mvprintw(7,width-100,"2.- Albertosaurus");
-  			mvprintw(8,width-100,"3.- Velociraptor");
-  			mvprintw(9,width-100,"4.- Carnotaurus");
+  			mvprintw(4,width-100,"CARNIVOROS");
+  			mvprintw(5,width-100,"0.- Tyrannosaurus (70,000)");
+  			mvprintw(6,width-100,"1.- Spinosaurus (85,000)");
+  			mvprintw(7,width-100,"2.- Albertosaurus (50,000)");
+  			mvprintw(8,width-100,"3.- Velociraptor (20,000)");
+  			mvprintw(9,width-100,"4.- Carnotaurus (35,000)");
 
-  			mvprintw(11,width-100,"Herbivoros");
-  			mvprintw(12,width-100,"5.- Apatosaurio");
-  			mvprintw(13,width-100,"6.- Triceratops");
-  			mvprintw(14,width-100,"7.- Iguanodonte");
-  			mvprintw(15,width-100,"8.- Pentaceratops");
-  			mvprintw(16,width-100,"9.- Ankylosaurus");
+  			mvprintw(11,width-100,"HERBIVOROS");
+  			mvprintw(12,width-100,"5.- Apatosaurio (75,000)");
+  			mvprintw(13,width-100,"6.- Triceratops (50,000)");
+  			mvprintw(14,width-100,"7.- Iguanodonte (20,000)");
+  			mvprintw(15,width-100,"8.- Pentaceratops (70,000)");
+  			mvprintw(16,width-100,"9.- Ankylosaurus (35,000)");
   			mvprintw(18,width-100,"Seleccione un dinosaurio: ");
   			opcion2 = getch();
   			refresh();
 
 
-  			if (opcion2 == '0'){//inicio de dinosaurios y su compra
+  			if (opcion2 == '0' && dinero >= 70000){//inicio de dinosaurios y su compra
   				clear();
 
   				string nombre = "";
@@ -109,7 +109,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new t_rex(nombre, genero));
           }
 
-  			}else if (opcion2 == '1'){
+  			}else if (opcion2 == '1' && dinero >= 85000){
   				clear();
 
   				string nombre = "";
@@ -135,7 +135,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new spinosaurus(nombre, genero));
           }
   				
-  			}else if (opcion2 == '2'){
+  			}else if (opcion2 == '2' && dinero >= 50000){
   				clear();
 
   				string nombre = "";
@@ -161,7 +161,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new albertosaurus(nombre, genero));   
           }
 
-  			}else if (opcion2 == '3'){
+  			}else if (opcion2 == '3' && dinero >= 20000){
   				clear();
 
   				string nombre = "";
@@ -187,7 +187,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new velociraptor(nombre, genero));          
           }
 
-  			}else if (opcion2 == '4'){
+  			}else if (opcion2 == '4' && dinero >= 35000){
   				clear();
 
   				string nombre = "";
@@ -216,7 +216,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new carnotaurus(nombre, genero));
           }
 
-  			}else if (opcion2 == '5'){
+  			}else if (opcion2 == '5' && dinero >= 75000){
   				clear();
 
   				string nombre = "";
@@ -245,7 +245,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new apatosaurio(nombre, genero));          
           }
 
-  			}else if (opcion2 == '6'){
+  			}else if (opcion2 == '6' && dinero >= 50000){
   				clear();
 
   				string nombre = "";
@@ -271,7 +271,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new triceratops(nombre, genero));
           }
 
-  			}else if (opcion2 == '7'){
+  			}else if (opcion2 == '7' && dinero >= 20000){
   				clear();
 
   				string nombre = "";
@@ -297,7 +297,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new iguanodonte(nombre, genero));
           }
 
-  			}else if (opcion2 == '8'){
+  			}else if (opcion2 == '8' && dinero >= 70000){
   				clear();
 
   				string nombre = "";
@@ -323,7 +323,7 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new pentaceratops(nombre, genero));
           }
   				
-  			}else if (opcion2 == '9'){
+  			}else if (opcion2 == '9' && dinero >= 35000){
   				clear();
 
   				string nombre = "";
@@ -349,7 +349,9 @@ int main(int argc, char* argv[]){
             dinosaurios.push_back(new ankylosaurus(nombre, genero));
           }
   				
-  			}//fin de compras
+  			}else{
+          mvprintw(10,width-130,"NO TIENES SUFICIENTE DINERO!");
+        }//fin de compras
 
   		}else if (opcion == '2'){//dar de comida
   			if (comida > 0){
@@ -379,7 +381,7 @@ int main(int argc, char* argv[]){
           clear();
         }
   			
-  		}else if (opcion == '3'){
+  		}else if (opcion == '3'){//aparearse
   		
   		}else if (opcion == '4'){//comprar comida
   			clear();
@@ -396,7 +398,14 @@ int main(int argc, char* argv[]){
 
   			clear();
   		}else if (opcion == '5'){//avanzar semana
-  			semana++;
+        mvprintw(10,width-130,"Seguro que quieres cambiar de semana[S/N]: ");
+        char seguir = getch();
+
+        if (seguir == 's' || seguir == 'S'){
+          semana++;
+          clear();
+          mvprintw(10,width-130,"Haz avanzado de semana");
+        }
   		}
   		clear();
   	}
