@@ -104,7 +104,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new t_rex(nombre, genero));
+          if (dinero >= 70000){
+            dinero = dinero - 70000;
+            dinosaurios.push_back(new t_rex(nombre, genero));
+          }
+
   			}else if (opcion2 == '1'){
   				clear();
 
@@ -126,7 +130,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new spinosaurus(nombre, genero));
+          if (dinero >= 85000){
+            dinero = dinero - 85000;
+            dinosaurios.push_back(new spinosaurus(nombre, genero));
+          }
+  				
   			}else if (opcion2 == '2'){
   				clear();
 
@@ -148,7 +156,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new albertosaurus(nombre, genero));
+          if (dinero >= 50000){
+            dinero = dinero - 50000;
+            dinosaurios.push_back(new albertosaurus(nombre, genero));   
+          }
+
   			}else if (opcion2 == '3'){
   				clear();
 
@@ -170,13 +182,20 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new velociraptor(nombre, genero));
+          if (dinero >= 20000){
+            dinero = dinero - 20000;
+            dinosaurios.push_back(new velociraptor(nombre, genero));          
+          }
+
   			}else if (opcion2 == '4'){
   				clear();
 
   				string nombre = "";
   				char nombre_temp[15];
   				char genero;
+          if (dinero >= 35000){
+            dinero = dinero - 35000;
+          }
 
   				move(4, width-100);
   				addstr("Ingrese el nombre del Carnotaurus: ");
@@ -192,13 +211,20 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new carnotaurus(nombre, genero));
+          if (dinero >= 35000){
+            dinero = dinero - 35000;
+            dinosaurios.push_back(new carnotaurus(nombre, genero));
+          }
+
   			}else if (opcion2 == '5'){
   				clear();
 
   				string nombre = "";
   				char nombre_temp[15];
   				char genero;
+          if (dinero >= 75000){
+            dinero = dinero - 75000;
+          }
 
   				move(4, width-100);
   				addstr("Ingrese el nombre del Apatosaurio: ");
@@ -214,7 +240,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new apatosaurio(nombre, genero));
+          if (dinero >= 75000){
+            dinero = dinero - 75000;
+            dinosaurios.push_back(new apatosaurio(nombre, genero));          
+          }
+
   			}else if (opcion2 == '6'){
   				clear();
 
@@ -236,7 +266,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new triceratops(nombre, genero));
+          if (dinero >= 50000){
+            dinero = dinero - 50000;
+            dinosaurios.push_back(new triceratops(nombre, genero));
+          }
+
   			}else if (opcion2 == '7'){
   				clear();
 
@@ -258,14 +292,18 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new iguanodonte(nombre, genero));
+          if (dinero >= 20000){
+            dinero = dinero - 20000;
+            dinosaurios.push_back(new iguanodonte(nombre, genero));
+          }
+
   			}else if (opcion2 == '8'){
   				clear();
 
   				string nombre = "";
   				char nombre_temp[15];
   				char genero;
-
+          
   				move(4, width-100);
   				addstr("Ingrese el nombre del Pentaceratops: ");
   				getnstr(nombre_temp, sizeof(nombre_temp) - 1);
@@ -280,7 +318,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new pentaceratops(nombre, genero));
+          if (dinero >= 70000){
+            dinero = dinero - 70000;
+            dinosaurios.push_back(new pentaceratops(nombre, genero));
+          }
+  				
   			}else if (opcion2 == '9'){
   				clear();
 
@@ -302,7 +344,11 @@ int main(int argc, char* argv[]){
   					nombre += nombre_temp[i];
   				}
 
-  				dinosaurios.push_back(new ankylosaurus(nombre, genero));
+          if (dinero >= 35000){
+            dinero = dinero - 35000;
+            dinosaurios.push_back(new ankylosaurus(nombre, genero));
+          }
+  				
   			}//fin de compras
 
   		}else if (opcion == '2'){//dar de comida
