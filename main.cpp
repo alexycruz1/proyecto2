@@ -41,7 +41,14 @@ int main(int argc, char* argv[]){
 		mvprintw(1,width-32,"%i", semana);
 		mvprintw(1,width-60,"Comida: ", "%i", comida);
 		mvprintw(1,width-52,"%i", comida);
+		mvprintw(14,width-130,"Nombre	Genero    Peso    Altura    Esperanza de vida    Era    Territorio    Hambre    Edad");
+		for(int i=0; i<dinosaurios.size();i++){
+			const char* impresion = (dinosaurios[i]->toString()).c_str();
+			mvprintw(15+i,width-132, "%i", i+1);
+			mvprintw(15+i,width-130, impresion);
+		}
   		refresh();
+		
 
   		mvprintw(4,width-130,"1.-Comprar un dinosaurio");
   		mvprintw(5,width-130,"2.-Dar de comer");
@@ -51,7 +58,9 @@ int main(int argc, char* argv[]){
   		mvprintw(10,width-130,"Ingrese una opcion: ");
   		refresh();
   		char opcion = getch();
-
+		
+		
+		
   		if (opcion == '1'){//comprar dinosaurios
   			clear();
   			char opcion2;
