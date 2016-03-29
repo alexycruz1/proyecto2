@@ -30,6 +30,14 @@ string t_rex::toString()const{
 	return temp.str();
 }
 
-void t_rex::comer(int&){
-	
+void t_rex::comer(int& comidon){
+	if(hambre<20){
+		comidon-=3;
+		hambre+=3;
+	}		
 }
+
+
+
+
+

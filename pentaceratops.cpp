@@ -30,6 +30,10 @@ string pentaceratops::toString()const{
 	return temp.str();
 }
 
-void pentaceratops::comer(int&){
-	
+void pentaceratops::comer(int& comidon){
+	if(hambre<20){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

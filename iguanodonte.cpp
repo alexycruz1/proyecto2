@@ -30,6 +30,10 @@ string iguanodonte::toString()const{
 	return temp.str();
 }
 
-void iguanodonte::comer(int&){
-	
+void iguanodonte::comer(int& comidon){
+	if(hambre<10){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

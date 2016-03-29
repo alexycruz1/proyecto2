@@ -30,6 +30,10 @@ string spinosaurus::toString()const{
 	return temp.str();
 }
 
-void spinosaurus::comer(int&){
-	
+void spinosaurus::comer(int& comidon){
+	if(hambre<25){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

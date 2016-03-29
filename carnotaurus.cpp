@@ -30,6 +30,10 @@ string carnotaurus::toString()const{
 	return temp.str();
 }
 
-void carnotaurus::comer(int&){
-	
+void carnotaurus::comer(int& comidon){
+	if(hambre<20){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

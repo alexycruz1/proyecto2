@@ -30,6 +30,10 @@ string triceratops::toString()const{
 	return temp.str();
 }
 
-void triceratops::comer(int&){
-	
+void triceratops::comer(int& comidon){
+	if(hambre<15){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

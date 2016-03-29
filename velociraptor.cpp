@@ -30,6 +30,10 @@ string velociraptor::toString()const{
 	return temp.str();
 }
 
-void velociraptor::comer(int&){
-	
+void velociraptor::comer(int& comidon){
+	if(hambre<10){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

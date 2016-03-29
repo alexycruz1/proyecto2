@@ -30,6 +30,10 @@ string apatosaurio::toString()const{
 	return temp.str();
 }
 
-void apatosaurio::comer(int&){
-	
+void apatosaurio::comer(int& comidon){
+	if(hambre<20){
+                comidon-=3;
+                hambre+=3;
+        }
+
 }

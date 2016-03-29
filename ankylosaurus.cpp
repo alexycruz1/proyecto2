@@ -30,6 +30,10 @@ string ankylosaurus::toString()const{
 	return temp.str();
 }
 
-void ankylosaurus::comer(int&){
+void ankylosaurus::comer(int& comidon){
+	if(hambre<20){
+                comidon-=3;
+                hambre+=3;
+        }
 	
 }
