@@ -22,8 +22,7 @@ dinosaurio::dinosaurio(string nombre, char genero, int peso, int altura, int esp
 
 dinosaurio::~dinosaurio(){}
 
-dinosaurio* dinosaurio::procrear(dinosaurio* r){
-	
+dinosaurio* dinosaurio::procrear(dinosaurio* r, string nombre, char genero){
 }
 
 /*string dinosaurio::toString()const{

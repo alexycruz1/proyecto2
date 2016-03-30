@@ -431,7 +431,7 @@ int main(int argc, char* argv[]){
           nombre += nombre_temp[i];
         }
 
-        dinosaurios.push_back(dinosaurios[dino1 - 1] -> procrear(dinosaurios[dino2 - 1]));
+        dinosaurios.push_back(dinosaurios[dino1 - 1] -> procrear(dinosaurios[dino2 - 1], nombre, genero));
 
         
   		}else if (opcion == '4'){//comprar comida
