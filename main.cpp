@@ -389,258 +389,231 @@ int main(int argc, char* argv[]){
   		}else if (opcion == '3'){//comprar huevo
   		  if (dinero >= 30000){
           int random = rand()%9;
-          //-------------------------------------------------
-            if (random == 0){//inicio de dinosaurios y su compra
-              clear();
+          if (random == 0){//inicio de dinosaurios y su compra
+            clear();
 
-              string nombre = "";
-              char nombre_temp[15];
-              char genero;
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-              move(4, width-100);
-              addstr("Ingrese el nombre del Tyrannosaurus: ");
-              getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-              clear();
+            move(4, width-100);
+            addstr("Ingrese el nombre del Tyrannosaurus: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-              move(4, width-100);
-              printw("Ingrese el genero del Tyrannosaurus(M/F): ");
-              genero = getch();
-              clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Tyrannosaurus(M/F): ");
+            genero = getch();
+            clear();
 
-              for (int i = 0; i < 16; ++i){
+            for (int i = 0; i < 16; ++i){
                nombre += nombre_temp[i];
-              }
+            }
 
             dinosaurios.push_back(new t_rex(nombre, genero));
-          
+          }else if (random == 1){
+            clear();
 
-        }else if (random == 1){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
+            move(4, width-100);
+            addstr("Ingrese el nombre del Spinosaurus: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Spinosaurus: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Spinosaurus(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Spinosaurus(M/F): ");
-          genero = getch();
-          clear();
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            dinosaurios.push_back(new spinosaurus(nombre, genero));  
+          }else if (random == 2){
+            clear();
 
-            dinosaurios.push_back(new spinosaurus(nombre, genero));
-          
-          
-        }else if (random == 2){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
+            move(4, width-100);
+            addstr("Ingrese el nombre del Albertosaurus: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Albertosaurus: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Albertosaurus(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Albertosaurus(M/F): ");
-          genero = getch();
-          clear();
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            dinosaurios.push_back(new albertosaurus(nombre, genero));    
+          }else if (random == 3){
+            clear();
 
-            dinosaurios.push_back(new albertosaurus(nombre, genero));   
-          
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-        }else if (random == 3){
-          clear();
+            move(4, width-100);
+            addstr("Ingrese el nombre del Velociraptor: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
+            move(4, width-100);
+            printw("Ingrese el genero del Velociraptor(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Velociraptor: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
-
-          move(4, width-100);
-          printw("Ingrese el genero del Velociraptor(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+             nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new velociraptor(nombre, genero));          
-          
+          }else if (random == 4){
+            clear();
 
-        }else if (random == 4){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
-          if (dinero >= 35000){
-            dinero = dinero - 35000;
-          }
+            move(4, width-100);
+            addstr("Ingrese el nombre del Carnotaurus: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Carnotaurus: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Carnotaurus(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Carnotaurus(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new carnotaurus(nombre, genero));
-          
+          }else if (random == 5){
+            clear();
 
-        }else if (random == 5){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
+            if (dinero >= 75000){
+              dinero = dinero - 75000;
+            }
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
-          if (dinero >= 75000){
-            dinero = dinero - 75000;
-          }
+            move(4, width-100);
+            addstr("Ingrese el nombre del Apatosaurio: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Apatosaurio: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Apatosaurio(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Apatosaurio(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+             nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new apatosaurio(nombre, genero));          
-          
+          }else if (random == 6){
+            clear();
 
-        }else if (random == 6){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
+            move(4, width-100);
+            addstr("Ingrese el nombre del Triceratops: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Triceratops: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Triceratops(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Triceratops(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new triceratops(nombre, genero));
-          
+          }else if (random == 7){
+            clear();
 
-        }else if (random == 7){
-          clear();
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
+            move(4, width-100);
+            addstr("Ingrese el nombre del Iguanodonte: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-          move(4, width-100);
-          addstr("Ingrese el nombre del Iguanodonte: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Iguanodonte(M/F): ");
+            genero = getch();
+            clear();
 
-          move(4, width-100);
-          printw("Ingrese el genero del Iguanodonte(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new iguanodonte(nombre, genero));
+          }else if (random == 8){
+            clear();
+
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
           
+            move(4, width-100);
+            addstr("Ingrese el nombre del Pentaceratops: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-        }else if (random == 8){
-          clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Pentaceratops(M/F): ");
+            genero = getch();
+            clear();
 
-          string nombre = "";
-          char nombre_temp[15];
-          char genero;
-          
-          move(4, width-100);
-          addstr("Ingrese el nombre del Pentaceratops: ");
-          getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-          clear();
-
-          move(4, width-100);
-          printw("Ingrese el genero del Pentaceratops(M/F): ");
-          genero = getch();
-          clear();
-
-          for (int i = 0; i < 16; ++i){
-            nombre += nombre_temp[i];
-          }
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
 
             dinosaurios.push_back(new pentaceratops(nombre, genero));
-          
-          
-      }else if (random == 9){
-        clear();
+          }else if (random == 9){
+            clear();
 
-        string nombre = "";
-        char nombre_temp[15];
-        char genero;
+            string nombre = "";
+            char nombre_temp[15];
+            char genero;
 
-        move(4, width-100);
-        addstr("Ingrese el nombre del Ankylosaurus: ");
-        getnstr(nombre_temp, sizeof(nombre_temp) - 1);
-        clear();
+            move(4, width-100);
+            addstr("Ingrese el nombre del Ankylosaurus: ");
+            getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+            clear();
 
-        move(4, width-100);
-        printw("Ingrese el genero del Ankylosaurus(M/F): ");
-        genero = getch();
-        clear();
+            move(4, width-100);
+            printw("Ingrese el genero del Ankylosaurus(M/F): ");
+            genero = getch();
+            clear();
 
-        for (int i = 0; i < 16; ++i){
-          nombre += nombre_temp[i];
-        }
+            for (int i = 0; i < 16; ++i){
+              nombre += nombre_temp[i];
+            }
             dinosaurios.push_back(new ankylosaurus(nombre, genero));   
-    }
-
-
-
-          //--------------------------------------------------
-
+          }          
         }else{
-          mvprintw(11,width-130,"NO TIENES SUFICIENTE DINERO");
+          mvprintw(11,width-130,"NO TIENES SUFICIENTE DINERO PARA UN HUEVO");
           clear();
         }
   		}else if (opcion == '4'){//comprar comida
