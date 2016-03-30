@@ -24,5 +24,4 @@ public:
     virtual bool morir()=0;
     virtual void cumple()=0;
     virtual void paga(int&,int&)=0;
-   	dinosaurio* procrear(dinosaurio*);
 };
