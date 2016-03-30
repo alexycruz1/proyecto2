@@ -390,7 +390,8 @@ int main(int argc, char* argv[]){
         }
   			
   		}else if (opcion == '3'){//comprar huevo
-  		  if (dinero >= 30000){
+  			if (dinero >= 30000){
+			dinero-=30000;
           int random = rand()%9;
           if (random == 0){
             mvprintw(11,width-130,"FELICIDADES!!! ES UN TYRANNOSAURUS");
@@ -414,8 +415,7 @@ int main(int argc, char* argv[]){
             for (int i = 0; i < 16; ++i){
                nombre += nombre_temp[i];
             }
-
-            dinosaurios.push_back(new t_rex(nombre, genero));
+          	dinosaurios.push_back(new t_rex(nombre, genero));
           }else if (random == 1){
             mvprintw(11,width-130,"FELICIDADES!!! ES UN SPINOSAURUS");
             getch();
