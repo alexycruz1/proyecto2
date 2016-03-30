@@ -6,7 +6,7 @@ using std::string;
 class iguanodonte :public dinosaurio{
 	
   public:
-	iguanodonte(string nombre,char genero, int peso=250, int altura=2, int esperanza_vida=240, string era="cretacio", string territorio="Occidente",int hambre = 10, int edad=0);
+	iguanodonte(string nombre,char genero, int peso=150, int altura=1, int esperanza_vida=140, string era="triasico", string territorio="Oriente",int hambre = 10, int edad=0);
 	string toString()const;
 	void addEdad(double, int);
 	iguanodonte procrear(const iguanodonte&);

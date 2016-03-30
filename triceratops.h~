@@ -12,7 +12,7 @@ class triceratops :public dinosaurio{
 	triceratops procrear(const triceratops&);
 	void comer(int&);
         void hambrita();
-        bool morir(int);
+        bool morir();
         void cumple();
         void paga(int&,int&);
 

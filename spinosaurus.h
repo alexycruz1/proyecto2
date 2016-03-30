@@ -6,7 +6,7 @@ using std::string;
 class spinosaurus :public dinosaurio{
 	
   public:
-	spinosaurus(string nombre,char genero, int peso=250, int altura=2, int esperanza_vida=240, string era="cretacio", string territorio="Occidente",int hambre = 25, int edad=0);
+	spinosaurus(string nombre,char genero, int peso=410, int altura=4, int esperanza_vida=270, string era="Cretacio", string territorio="Meridion",int hambre = 25, int edad=0);
 	string toString()const;
 	void addEdad(double, int);
 	spinosaurus procrear(const spinosaurus&);
