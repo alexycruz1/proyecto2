@@ -59,4 +59,6 @@ void t_rex::paga(int& dinero,int& semana){
 	}
 }
 
-
+t_rex* t_rex::procrear(t_rex* r){
+	return new t_rex("hola", 'm');;
+}

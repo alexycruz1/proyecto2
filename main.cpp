@@ -360,19 +360,17 @@ int main(int argc, char* argv[]){
 
   		}else if (opcion == '2'){//dar de comida
   			if (comida > 0){
-         mvprintw(11,width-130,"Ingrese el dinosaurio a alimentar: ");
+          mvprintw(11,width-130,"Ingrese el dinosaurio a alimentar: ");
           refresh();
           string elegir_dino = " ";
           char elegir_dino_temp[100];
           int dino;
-
-          move(11, width-130);
-          addstr("Ingrese el dinosaurio a alimentar: ");
           getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
 
           for (int i = 0; i < 101; ++i){
             elegir_dino += elegir_dino_temp[i];
           }
+
           dino = atoi(elegir_dino.c_str()); 
 
           for (int i = 0; i < dinosaurios.size(); i++){
@@ -387,7 +385,55 @@ int main(int argc, char* argv[]){
         }
   			
   		}else if (opcion == '3'){//aparearse
-  		
+  		  mvprintw(11,width-130,"Ingrese el primer dinosaurio a aparear: ");
+        refresh();
+        string elegir_dino = " ";
+        char elegir_dino_temp[100];
+        int dino1;
+        getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
+
+        for (int i = 0; i < 101; ++i){
+          elegir_dino += elegir_dino_temp[i];
+        }
+          
+        dino1 = atoi(elegir_dino.c_str());
+        //----------------------------------------------------------------------------//
+        mvprintw(11,width-130,"Ingrese el segundo dinosaurio a aparear: ");
+        refresh();
+        elegir_dino = " ";
+        elegir_dino_temp[100];
+        int dino2;
+        getnstr(elegir_dino_temp, sizeof(elegir_dino_temp) - 1);
+
+        for (int i = 0; i < 101; ++i){
+          elegir_dino += elegir_dino_temp[i];
+        }
+
+          
+        dino2 = atoi(elegir_dino.c_str());
+        clear();
+
+        string nombre = "";
+        char nombre_temp[15];
+        char genero;
+
+        move(4, width-100);
+        addstr("Ingrese el nombre del Dinosaurio: ");
+        getnstr(nombre_temp, sizeof(nombre_temp) - 1);
+        clear();
+
+        move(4, width-100);
+        printw("Ingrese el genero del Dinosaurio(M/F): ");
+        genero = getch();
+        clear();
+
+        for (int i = 0; i < 16; ++i){
+          nombre += nombre_temp[i];
+        }
+
+        dinosaurios.push_back(dinosaurios[dino1 - 1] -> procrear(dinosaurios[dino2 - 1]));
+
+        
   		}else if (opcion == '4'){//comprar comida
   			clear();
   			int nueva_comida;

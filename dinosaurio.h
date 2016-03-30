@@ -21,7 +21,8 @@ public:
 	virtual string toString()const=0;	
 	virtual void comer(int&)=0;
 	virtual void hambrita()=0;
-        virtual bool morir()=0;
-        virtual void cumple()=0;
-        virtual void paga(int&,int&)=0;
+    virtual bool morir()=0;
+    virtual void cumple()=0;
+    virtual void paga(int&,int&)=0;
+   	dinosaurio* procrear(dinosaurio*);
 };
