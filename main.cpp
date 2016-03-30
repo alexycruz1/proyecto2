@@ -38,6 +38,7 @@ int main(int argc, char* argv[]){
   		move(0, 10);
   		start_color();
     	init_pair(1, COLOR_BLUE, COLOR_BLACK);
+      init_pair(2, COLOR_RED, COLOR_BLACK);
     	attron(COLOR_PAIR(1));
   		mvprintw(1,width-20,"Dinero: ", "%i", dinero);
 		  mvprintw(1,width-12,"%i", dinero);
@@ -47,13 +48,15 @@ int main(int argc, char* argv[]){
 		  mvprintw(1,width-52,"%i", comida);
 		  mvprintw(14,width-130,"Genero    Peso    Altura    Esperanza de vida       Era         Territorio    Hambre    Edad    Nombre");
 		  for(int i=0; i<dinosaurios.size();i++){
+        attron(COLOR_PAIR(2));
 			 const char* impresion = (dinosaurios[i]->toString()).c_str();
 			 mvprintw(15+i,width-132, "%i", i+1);
 			 mvprintw(15+i,width-130, impresion);
 		  }
   		refresh();
-		
-
+		  
+      attron(COLOR_PAIR(1));
+      mvprintw(2,width-130,"***TU MUNDO JURASICO***");
   		mvprintw(4,width-130,"1.-Comprar un dinosaurio");
   		mvprintw(5,width-130,"2.-Dar de comer");
   		mvprintw(6,width-130,"3.-Comprar huevo (30,000)");
@@ -389,7 +392,9 @@ int main(int argc, char* argv[]){
   		}else if (opcion == '3'){//comprar huevo
   		  if (dinero >= 30000){
           int random = rand()%9;
-          if (random == 0){//inicio de dinosaurios y su compra
+          if (random == 0){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN TYRANNOSAURUS");
+            getch();
             clear();
 
             string nombre = "";
@@ -412,6 +417,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new t_rex(nombre, genero));
           }else if (random == 1){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN SPINOSAURUS");
+            getch();
             clear();
 
             string nombre = "";
@@ -434,6 +441,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new spinosaurus(nombre, genero));  
           }else if (random == 2){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN ALBERTOSAURUS");
+            getch();
             clear();
 
             string nombre = "";
@@ -456,6 +465,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new albertosaurus(nombre, genero));    
           }else if (random == 3){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN VELOCIRAPTOR");
+            getch();
             clear();
 
             string nombre = "";
@@ -478,6 +489,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new velociraptor(nombre, genero));          
           }else if (random == 4){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN CARNOTAURUS");
+            getch();
             clear();
 
             string nombre = "";
@@ -500,6 +513,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new carnotaurus(nombre, genero));
           }else if (random == 5){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN APATOSAURIO");
+            getch();
             clear();
 
             string nombre = "";
@@ -525,6 +540,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new apatosaurio(nombre, genero));          
           }else if (random == 6){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN TRICERATOPS");
+            getch();
             clear();
 
             string nombre = "";
@@ -547,6 +564,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new triceratops(nombre, genero));
           }else if (random == 7){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN IGUANODONTE");
+            getch();
             clear();
 
             string nombre = "";
@@ -569,6 +588,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new iguanodonte(nombre, genero));
           }else if (random == 8){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN PENTACERATOPS");
+            getch();
             clear();
 
             string nombre = "";
@@ -591,6 +612,8 @@ int main(int argc, char* argv[]){
 
             dinosaurios.push_back(new pentaceratops(nombre, genero));
           }else if (random == 9){
+            mvprintw(11,width-130,"FELICIDADES!!! ES UN ANKYLOSAURUS");
+            getch();
             clear();
 
             string nombre = "";
@@ -615,7 +638,7 @@ int main(int argc, char* argv[]){
         }else{
           mvprintw(11,width-130,"NO TIENES SUFICIENTE DINERO PARA UN HUEVO");
           clear();
-        }
+        }//fin de compra de huevos
   		}else if (opcion == '4'){//comprar comida
   			clear();
   			int nueva_comida;
